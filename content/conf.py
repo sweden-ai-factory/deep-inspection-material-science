@@ -159,12 +159,8 @@ intersphinx_mapping = {
 import os
 
 if os.environ.get("GITHUB_REF", "") == "refs/heads/main":
+    # Privacy-friendly analytics by Plausible
     html_js_files = [
-        (
-            "https://plausible.io/js/script.js",
-            {
-                "data-domain": f"learn.swedenaifactory.se/{(github_repo_name or detected_repo_name).lower()}",
-                "defer": "defer",
-            },
-        ),
+        ("https://plausible.io/js/pa-3Lsa9rB52Bg3Vmb9sgtV1.js", {"async": "async"}),
+        "pa_init.js",
     ]
